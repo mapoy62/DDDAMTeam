@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivFood"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="502dp"
+        tools:srcCompat="@drawable/promocion_burguers" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFoodElements"
+        android:layout_width="wrap_content"
+        android:layout_height="197dp"
+        android:layout_alignTop="@+id/ivFood"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="204dp"
+        android:layout_marginBottom="288dp" />
+
+    <RadioGroup
+        android:id="@+id/rgBurguerTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="155dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="458dp"
+        android:layout_marginBottom="118dp"
+        android:background="@android:color/holo_blue_light"
+        android:paddingLeft="15dp">
+
+        <RadioButton
+            android:id="@+id/rbHawaiana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hawaiana" />
+
+        <RadioButton
+            android:id="@+id/rbDoble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doble" />
+
+        <RadioButton
+            android:id="@+id/rbSencilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sencilla" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="628dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="41dp"
+        android:text="Regresar"
+        android:backgroundTint="#F44336"
+        />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="227dp"
+        android:layout_marginTop="628dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="41dp"
+        android:backgroundTint="#2196F3"
+        android:text="Ordenar" />
+
+
+</RelativeLayout>
+

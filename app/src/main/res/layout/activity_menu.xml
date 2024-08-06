@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ejerciciosclase.ejercicio2.actividad.MenuActivity">
+
+    <EditText
+        android:hint="Search"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageButton
+            android:src="@drawable/btnhamb"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Ven a sucursal y pregunta por nuestras promociones"
+                android:background="@android:color/holo_orange_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glBut"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glLeftbut"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glRightbut"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="Filtrar"
+                app:layout_constraintLeft_toRightOf="@id/glLeftbut"
+                app:layout_constraintTop_toTopOf="@id/glBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:layout_marginTop="10dp"
+                android:id="@+id/spinner"
+                app:layout_constraintRight_toLeftOf="@+id/glRightbut"
+                app:layout_constraintTop_toTopOf="@id/glBut"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glLeftCard"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glRightCard"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glBottomCard"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glBottomtwoCard"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glBottomthreeCard"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glTvone"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:src="@drawable/hawa"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/glLeftCard"
+                app:layout_constraintRight_toLeftOf="@id/glRightCard"
+                app:layout_constraintBottom_toTopOf="@id/glBottomCard"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"/>
+
+            <TextView
+                android:text="Disfruta de nuestra Hamburguesa Hawaiana: jugosa carne de res a la parrilla con piña asada, queso suizo, jamón ahumado, lechuga, tomate y cebolla morada en un suave pan brioche con mayonesa al ajo. Un bocado del paraíso tropical."
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/glRightCard"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/glBottomCard"
+                android:textSize="10sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:lineSpacingExtra="2dp"/>
+
+
+            <ImageView
+                android:src="@drawable/sencilla"
+                app:layout_constraintTop_toTopOf="@id/glBottomCard"
+                app:layout_constraintLeft_toRightOf="@id/glLeftCard"
+                app:layout_constraintRight_toLeftOf="@id/glRightCard"
+                app:layout_constraintBottom_toTopOf="@id/glBottomtwoCard"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"/>
+
+            <TextView
+                android:text="Descubre el placer de lo clásico con nuestra Hamburguesa Sencilla. Carne de res a la parrilla, perfectamente sazonada, acompañada de lechuga fresca, tomate maduro y cebolla crujiente. Todo esto en un pan suave y esponjoso con un toque de mayonesa y mostaza. Sencilla, deliciosa y siempre satisfactoria."
+                app:layout_constraintTop_toBottomOf="@id/glBottomCard"
+                app:layout_constraintLeft_toRightOf="@id/glRightCard"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/glBottomtwoCard"
+                android:textSize="10sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:lineSpacingExtra="2dp"/>
+
+            <ImageView
+                android:src="@drawable/doble"
+                app:layout_constraintTop_toTopOf="@id/glBottomtwoCard"
+                app:layout_constraintLeft_toRightOf="@id/glLeftCard"
+                app:layout_constraintRight_toLeftOf="@id/glRightCard"
+                app:layout_constraintBottom_toTopOf="@id/glBottomthreeCard"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"/>
+
+            <TextView
+                android:text="Prepárate para una experiencia contundente con nuestra Hamburguesa Doble. Dos jugosas carnes de res a la parrilla, perfectamente sazonadas y apiladas, cubiertas con queso cheddar derretido. Acompañada de lechuga fresca, tomate jugoso y cebolla crujiente, todo dentro de un suave pan brioche. Completa con un toque de mayonesa y mostaza."
+                app:layout_constraintTop_toBottomOf="@id/glBottomtwoCard"
+                app:layout_constraintLeft_toRightOf="@id/glRightCard"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/glBottomthreeCard"
+                android:textSize="10sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:lineSpacingExtra="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>
