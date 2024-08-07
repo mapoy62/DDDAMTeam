@@ -81,9 +81,6 @@
         <activity
             android:name=".ejerciciosclase.ejercicio1.LifeCycleActivity"
             android:exported="false" />
-        <activity
-            android:name=".ejerciciosclase.ejercicio2.actividad.PersonalizedOrderActivity"
-            android:exported="false"></activity>
     </application>
 
 </manifest>
