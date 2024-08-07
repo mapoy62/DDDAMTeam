@@ -1,4 +1,4 @@
-package com.azul.androibasic12.ejerciciosequipo
+package com.erha.androidbasic12.ejerciciosclase.ejercicio2.actividad
 
 import android.os.Bundle
 import android.widget.Button
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erha.androidbasic12.R
-import com.erha.androidbasic12.ejerciciosclase.ejercicio2.componentesgraficos.list.ItemAdapter
-import com.erha.androidbasic12.ejerciciosclase.ejercicio2.componentesgraficos.list.ItemEntity
+import com.erha.androidbasic12.ejerciciosclase.ejercicio2.actividad.list.ItemAdapter
+import com.erha.androidbasic12.ejerciciosclase.ejercicio2.actividad.list.ItemEntity
 
 class PersonalizedOrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,11 +20,6 @@ class PersonalizedOrderActivity : AppCompatActivity() {
         val rbBurguers = findViewById<RadioGroup>(R.id.rgBurguerTypes)
         val btSetInfo = findViewById<Button>(R.id.btnOrder)
 
-
-        //Val data  + la lista de elementos a mandar
-        //val adapter = Nombre del adaptador(data)
-        //list.adapter = adapter
-        //list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         val data = listOf(
             ItemEntity("Papas a la francesa medianas", 38),
             ItemEntity("Aros de cebollas", 52),

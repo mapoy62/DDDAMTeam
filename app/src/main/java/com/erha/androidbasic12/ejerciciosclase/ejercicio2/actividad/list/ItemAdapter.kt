@@ -1,4 +1,4 @@
-package com.erha.androidbasic12.ejerciciosclase.ejercicio2.componentesgraficos.list
+package com.erha.androidbasic12.ejerciciosclase.ejercicio2.actividad.list
 
 import android.view.LayoutInflater
 import android.view.View

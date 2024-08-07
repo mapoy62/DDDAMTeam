@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnPeronalizacion"
+        android:id="@+id/btnPersonalizacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
@@ -35,6 +35,6 @@
         android:textSize="18dp"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="10dp"
-        android:text="Esta es la actividad 1 de Ciclos de Vida. Con los botones se puede mover a los otros 2 ejercicios" />
+        android:text="Esta es la actividad de navegación de Layouts :)" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
