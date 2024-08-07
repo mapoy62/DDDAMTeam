@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.erha.androidbasic12.R
 
+//ESTE ES UN COMENTARIO para probar el git
+
 class ItemAdapter(val list: List<ItemEntity>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     private val checkedItems = BooleanArray(list.size)
