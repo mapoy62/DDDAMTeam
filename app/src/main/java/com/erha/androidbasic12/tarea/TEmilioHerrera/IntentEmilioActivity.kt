@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.erha.androidbasic12.R
+import com.erha.androidbasic12.tarea.MenuTareasActivity
 
 class IntentEmilioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,6 @@ class IntentEmilioActivity : AppCompatActivity() {
         val labelEmail = findViewById<TextView>(R.id.labelEmail)
         val labelPassword = findViewById<TextView>(R.id.labelPassword)
         val labelSex = findViewById<TextView>(R.id.labelSex)
-        val btRegresar = findViewById<Button>(R.id.btRegresar)
 
         // Obtener los datos del Intent
         intent.extras?.let {
@@ -46,12 +46,18 @@ class IntentEmilioActivity : AppCompatActivity() {
             }
         }
 
-        btRegresar.setOnClickListener {
-            val resultIntent = Intent().apply {
-                putExtra("EXTRA_IS_CORRECT_KEY", true)
+        val btnSendActivity = findViewById<Button>(R.id.btMenu)
+        val btnSendActivity2 = findViewById<Button>(R.id.btRegresar)
+
+        btnSendActivity.setOnClickListener {
+            val intent = Intent(this, MenuTareasActivity::class.java).apply {
             }
-            setResult(RESULT_OK, resultIntent)
-            finish()
+            startActivity(intent)
+        }
+        btnSendActivity2.setOnClickListener {
+            val intent = Intent(this, EmilioTareaActivity::class.java).apply {
+            }
+            startActivity(intent)
         }
     }
 }

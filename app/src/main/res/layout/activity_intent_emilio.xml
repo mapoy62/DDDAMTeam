@@ -211,9 +211,21 @@
         android:text="Regresar"
         app:layout_constraintTop_toBottomOf="@id/glButtonUp"
         app:layout_constraintStart_toStartOf="@id/glLeftImage"
+        app:layout_constraintEnd_toEndOf="@id/glCenter"
+        app:layout_constraintBottom_toTopOf="@id/glButtonDown"
+        android:layout_width="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="55dp"/>
+
+    <Button
+        android:id="@+id/btMenu"
+        android:text="Regresar al Menu"
+        app:layout_constraintTop_toBottomOf="@id/glButtonUp"
+        app:layout_constraintStart_toStartOf="@id/glCenter"
         app:layout_constraintEnd_toEndOf="@id/glRightET"
         app:layout_constraintBottom_toTopOf="@id/glButtonDown"
         android:layout_width="0dp"
+        android:layout_marginLeft="5dp"
         android:layout_height="55dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
