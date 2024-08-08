@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tarea.TEmilioHerrera.EmilioTareaActivity">
+    tools:context=".tarea.TEmilioHerrera.IntentEmilioActivity">
 
     <ImageView
         android:id="@+id/ivFondo"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/back"
+        android:background="@drawable/backinv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/tvRegistrate"
-        android:text="Registrate"
+        android:text="Bienvenido"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/glTopImage"
@@ -43,7 +43,7 @@
 
     <TextView
         android:id="@+id/tvLlenacampos"
-        android:text="Llena todos los campos"
+        android:text="Gracias por Registrarte"
         android:textSize="16sp"
         android:layout_marginTop="5dp"
         app:layout_constraintTop_toBottomOf="@id/tvRegistrate"
@@ -65,11 +65,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etNombre"
-        android:hint="Escribe tu nombre"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenter"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/labelNombres1"
+        android:text="Este es tu nombre: "
         app:layout_constraintTop_toBottomOf="@id/glFirstEt"
         app:layout_constraintStart_toEndOf="@id/glLeftImage"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/labelNombres"
+        android:text="Este es tu nombre"
+        app:layout_constraintTop_toBottomOf="@id/glFirstEt"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
         app:layout_constraintEnd_toStartOf="@id/glRightET"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
@@ -81,14 +97,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etApellido"
-        android:hint="Escribe tu apellido"
+    <TextView
+        android:id="@+id/labelApellido2"
         app:layout_constraintTop_toBottomOf="@id/glSecondEt"
         app:layout_constraintStart_toEndOf="@id/glLeftImage"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Este es tu apellido: " />
+
+    <TextView
+        android:id="@+id/labelApellido"
+        app:layout_constraintTop_toBottomOf="@id/glSecondEt"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
         app:layout_constraintEnd_toStartOf="@id/glRightET"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Este es tu apellido" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glThirdEt"
@@ -97,14 +122,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:hint="Escribe tu email"
+    <TextView
+        android:id="@+id/labelEmail3"
         app:layout_constraintTop_toBottomOf="@id/glThirdEt"
         app:layout_constraintStart_toEndOf="@id/glLeftImage"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Este es tu email: " />
+
+    <TextView
+        android:id="@+id/labelEmail"
+        app:layout_constraintTop_toBottomOf="@id/glThirdEt"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
         app:layout_constraintEnd_toStartOf="@id/glRightET"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Este es tu email" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFourthEt"
@@ -113,31 +147,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:hint="Escribe tu password"
+    <TextView
+        android:id="@+id/labelPassword4"
         app:layout_constraintTop_toBottomOf="@id/glFourthEt"
         app:layout_constraintStart_toEndOf="@id/glLeftImage"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Esta es tu password: " />
+
+    <TextView
+        android:id="@+id/labelPassword"
+        app:layout_constraintTop_toBottomOf="@id/glFourthEt"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
         app:layout_constraintEnd_toStartOf="@id/glRightET"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Esta es tu password" />
 
-    <CheckBox
-        android:id="@+id/cbTerminos"
-        android:text="Acepto los Terminos"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintLeft_toRightOf="@id/glLeftImage"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glFiveEt"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/labelSex5"
+        app:layout_constraintTop_toBottomOf="@id/glFiveEt"
+        app:layout_constraintStart_toEndOf="@id/glLeftImage"
+        app:layout_constraintEnd_toStartOf="@id/glCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sexo: "/>
+
+    <TextView
+        android:id="@+id/labelSex"
+        app:layout_constraintTop_toBottomOf="@id/glFiveEt"
+        app:layout_constraintStart_toEndOf="@id/glCenter"
+        app:layout_constraintEnd_toStartOf="@id/glRightET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sexo: " />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glButtonUp"
@@ -154,8 +207,8 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btRegistrar"
-        android:text="Registrarse"
+        android:id="@+id/btRegresar"
+        android:text="Regresar"
         app:layout_constraintTop_toBottomOf="@id/glButtonUp"
         app:layout_constraintStart_toStartOf="@id/glLeftImage"
         app:layout_constraintEnd_toEndOf="@id/glRightET"
