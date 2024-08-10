@@ -87,7 +87,7 @@ class RegisterActivityOYMP : AppCompatActivity() {
                     etEmail.error = "Email is required"
                     etEmail.requestFocus()
                 }
-                (password.isEmpty() || password.length <= 8) -> {
+                (password.isEmpty() || password.length < 8) -> {
                     etPwd.error = "Must be at least 8 characters"
                     etPwd.requestFocus()
                 }

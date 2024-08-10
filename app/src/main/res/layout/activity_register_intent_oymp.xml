@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_register_show"
-    tools:context=".RegisterIntentActivityOYMP">
+    tools:context=".tarea.TOliviaYuyuMaceda.RegisterIntentActivityOYMP">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glStart"
@@ -44,9 +44,30 @@
         android:layout_height="wrap_content"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHeader3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBody"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".60"
+        app:layout_constraintGuide_percent=".70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -57,24 +78,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:text="Welcome"
-        android:fontFamily="cursive"
-        android:layout_marginTop="30dp"
-        android:textSize="48sp"
-        android:textAppearance="@color/white"
+    <ImageView
+        android:id="@+id/ivWelcome"
+        android:src="@drawable/img_welcome_oymp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartImg"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndImg"
+        app:layout_constraintTop_toTopOf="@id/glHeader2"
+        app:layout_constraintBottom_toBottomOf="@id/glHeader3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
         app:layout_constraintTop_toTopOf="@+id/glHeader"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:text="Welcome"
+            android:fontFamily="cursive"
+            android:layout_marginTop="30dp"
+            android:textSize="42sp"
+            android:textAppearance="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/Name"
+            android:paddingStart="12dp"
+            android:fontFamily="cursive"
+            android:layout_marginTop="30dp"
+            android:textSize="42sp"
+            android:textAppearance="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/lbName"
         android:text="Name registered: "
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/glHeader2"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/glHeader3"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -82,7 +132,8 @@
     <TextView
         android:id="@+id/tvName"
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/glHeader2"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/glHeader3"
         app:layout_constraintLeft_toRightOf="@id/glCenter"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
         android:layout_width="wrap_content"
@@ -92,6 +143,7 @@
         android:id="@+id/lbLastName"
         android:padding="12dp"
         android:text="LastName registered: "
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         android:layout_width="wrap_content"
@@ -100,6 +152,7 @@
     <TextView
         android:id="@+id/tvLastName"
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintLeft_toRightOf="@id/glCenter"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
@@ -110,6 +163,7 @@
         android:id="@+id/lbEmail"
         android:text="Email registered: "
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvLastName"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         android:layout_width="wrap_content"
@@ -118,6 +172,7 @@
     <TextView
         android:id="@+id/tvEmail"
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvLastName"
         app:layout_constraintLeft_toRightOf="@id/glCenter"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
@@ -128,6 +183,7 @@
         android:id="@+id/lbSex"
         android:text="Sex registered: "
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         android:layout_width="wrap_content"
@@ -136,6 +192,7 @@
     <TextView
         android:id="@+id/tvSex"
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"
         app:layout_constraintLeft_toRightOf="@id/glCenter"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
@@ -146,6 +203,7 @@
         android:id="@+id/lbCountry"
         android:text="Country registered: "
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvSex"
         app:layout_constraintLeft_toRightOf="@id/glStart"
         android:layout_width="wrap_content"
@@ -154,6 +212,7 @@
     <TextView
         android:id="@+id/tvCountry"
         android:padding="12dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvSex"
         app:layout_constraintLeft_toRightOf="@id/glCenter"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
@@ -165,7 +224,7 @@
         android:text="Home"
         app:layout_constraintTop_toBottomOf="@+id/glBody"
         app:layout_constraintLeft_toRightOf="@id/glStart"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"/>
 
     <Button
@@ -173,7 +232,7 @@
         android:text="Register OYMP"
         app:layout_constraintTop_toBottomOf="@+id/glBody"
         app:layout_constraintRight_toLeftOf="@id/glEnd"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

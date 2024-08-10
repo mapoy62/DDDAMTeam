@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivityOYMP"
+    tools:context=".tarea.TOliviaYuyuMaceda.RegisterActivityOYMP"
     android:background="@drawable/bg_register">
 
     <androidx.constraintlayout.widget.Guideline
@@ -64,6 +64,7 @@
 
     <TextView
         android:text="Create your account"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvRegister"
         android:layout_marginTop="20dp"
         app:layout_constraintLeft_toRightOf="@id/glStart"
@@ -168,7 +169,8 @@
     <CheckBox
         android:id="@+id/cbTerms"
         android:text="By registering, you are agreeing to our Terms of use and Privacy Policy"
-        android:textSize="10sp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
         app:layout_constraintStart_toEndOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"

@@ -3,6 +3,7 @@ package com.erha.androidbasic12.tarea.TOliviaYuyuMaceda
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.erha.androidbasic12.R
@@ -20,6 +21,9 @@ class RegisterIntentActivityOYMP : AppCompatActivity() {
         val labelEmail = findViewById<TextView>(R.id.tvEmail)
         val labelSex= findViewById<TextView>(R.id.tvSex)
         val labelCountry = findViewById<TextView>(R.id.tvCountry)
+        val ivWelcome = findViewById<ImageView>(R.id.ivWelcome)
+        val tvName = findViewById<TextView>(R.id.Name)
+        ivWelcome.setImageResource(R.drawable.img_welcome_oymp)
 
         val btnSendHome = findViewById<Button>(R.id.btnHome)
         val btnSendActivityRegister = findViewById<Button>(R.id.btnRegisterOYMP)
@@ -29,6 +33,7 @@ class RegisterIntentActivityOYMP : AppCompatActivity() {
             if(it.containsKey("EXTRA_NAME_KEY")){
                 val name = it.getString("EXTRA_NAME_KEY", "")
                 labelName.text = name
+                tvName.text = name
             }
             if(it.containsKey("EXTRA_LAST_NAME_KEY")){
                 val lastName = it.getString("EXTRA_LAST_NAME_KEY", "")
