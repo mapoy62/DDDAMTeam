@@ -165,4 +165,13 @@
             android:layout_height="wrap_content"/>
     </RadioGroup>
 
+    <Button
+        android:id="@+id/btRegistrar"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@id/glBody"
+        android:layout_width="0dp"
+        android:layout_height="55dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
