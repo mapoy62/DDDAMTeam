@@ -4,12 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".actividadfinal.SignUpFragment">
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentSignUp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    tools:context=".actividadfinal.LoginFragment">
 
     <ImageView
         android:src="@drawable/signupbck"
@@ -46,6 +41,13 @@
         android:layout_height="wrap_content"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHeader3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glBody"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".75"
@@ -61,7 +63,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:text="Register"
+        android:text="Login"
         android:fontFamily="@font/cabin_bold"
         android:layout_marginTop="45dp"
         android:textSize="38sp"
@@ -74,7 +76,7 @@
 
     <TextView
         android:fontFamily="@font/cabin"
-        android:text="Create your account"
+        android:text="Welcome back! Let's start"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvRegister"
         android:layout_marginTop="8dp"
@@ -83,33 +85,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etName"
-        android:hint="Name"
-        android:drawableStart="@drawable/ic_user"
-        android:background="#80FFFFFF"
-        android:layout_marginBottom="40dp"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/glHeader2"
-        app:layout_constraintBottom_toTopOf="@id/etLastName"
-        app:layout_constraintLeft_toRightOf="@id/glStart"
-        app:layout_constraintRight_toLeftOf="@id/glEnd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/etLastName"
-        android:hint="Last Name"
-        android:drawableStart="@drawable/ic_user"
-        android:background="#80FFFFFF"
-        android:padding="10dp"
-        app:layout_constraintStart_toEndOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        android:layout_marginBottom="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/etEmail"
@@ -119,7 +94,7 @@
         android:padding="10dp"
         app:layout_constraintStart_toEndOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName"
+        app:layout_constraintTop_toBottomOf="@+id/glHeader3"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_width="0dp"
@@ -139,44 +114,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
-    <RadioGroup
-        android:id="@+id/rgSex"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@id/glEnd"
-        android:orientation="horizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/rbWoman"
-            android:text="Woman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RadioButton
-            android:id="@+id/rbMan"
-            android:text="Man"
-            android:layout_marginStart="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RadioButton
-            android:id="@+id/rbNotSay"
-            android:layout_marginStart="10dp"
-            android:text="Prefer not respond"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RadioGroup>
-
     <Button
-        android:id="@+id/btRegistrar"
-        android:text="Register"
+        android:id="@+id/btLogin"
+        android:text="Log in"
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toTopOf="@id/glBody"
         android:layout_width="0dp"
         android:layout_height="55dp"/>
+
+    <EditText
+        android:id="@+id/btToRegister"
+        android:text="¿Aún no tienes cuenta?"
+        android:layout_marginHorizontal="70dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/btLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
