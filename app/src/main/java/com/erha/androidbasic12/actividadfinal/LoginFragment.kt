@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.erha.androidbasic12.R
 import com.erha.androidbasic12.databinding.FragmentLoginBinding
 
+//POBLEMAS DE VERIFICACION (CORREGIDOS)
 /**
  * A simple [Fragment] subclass.
  * Use the [LoginFragment.newInstance] factory method to
@@ -30,19 +31,24 @@ class LoginFragment : Fragment() {
         val btLogin = binding.btLogin
 
         btLogin.setOnClickListener {
-            if(email.isEmpty() || password.isEmpty()){
+            if(binding.etEmail.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()){
                 when{
-                    email.isEmpty() -> Toast.makeText(activity,"Please write your email address", Toast.LENGTH_SHORT).show()
-                    password.isEmpty()-> Toast.makeText(activity,"Please write your password",Toast.LENGTH_SHORT).show()
+                    binding.etEmail.text.toString().isEmpty() -> Toast.makeText(activity,"Please write your email address", Toast.LENGTH_SHORT).show()
+                    binding.etPassword.text.toString().isEmpty()-> Toast.makeText(activity,"Please write your password",Toast.LENGTH_SHORT).show()
                 }
             }else{
                 //Envío de datos al Activity que mostrará la info
-                val intent = Intent(activity, ::class.java).apply{
-                    putExtra("EXTRA_NAME_KEY", email)
-                    putExtra("EXTRA_PASSWORD_KEY", password)
+                val intent = Intent(activity, LoggedInActivity::class.java).apply{
+                    putExtra("EXTRA_EMAIL_KEY", binding.etEmail.text.toString())
+                    putExtra("EXTRA_PASSWORD_KEY", binding.etPassword.text.toString())
+                    //Toast.makeText(activity,"el email es ${binding.etEmail.text.toString()}", Toast.LENGTH_SHORT).show()
                 }
                startActivity(intent)
             }
+        }
+
+        binding.btToRegister.setOnClickListener {
+           parentFragmentManager.beginTransaction().replace(R.id.fragmentPrincipal,SignUpFragment.newInstance()).commit()
         }
         return binding.root
     }

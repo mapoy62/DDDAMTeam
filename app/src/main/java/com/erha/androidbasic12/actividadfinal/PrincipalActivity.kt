@@ -22,6 +22,7 @@ class PrincipalActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .add(R.id.fragmentPrincipal, LoginFragment.newInstance())
+           // .add(R.id.fragmentPrincipal, SignUpFragment.newInstance())
             .commit()
     }
 }
