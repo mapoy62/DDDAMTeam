@@ -160,7 +160,7 @@
         <RadioButton
             android:id="@+id/rbNotSay"
             android:layout_marginStart="10dp"
-            android:text="Prefer not respond"
+            android:text="Prefer to not respond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RadioGroup>
