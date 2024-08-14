@@ -21,17 +21,17 @@ class LoggedInActivity : AppCompatActivity() {
             if (it.containsKey("EXTRA_NAME_KEY"))
                 binding.tvName.text = it.getString("EXTRA_NAME_KEY", "")
             else
-                binding.tvName.text = "Juanito"
+                binding.tvName.text = "No Aplica"
             if (it.containsKey("EXTRA_LASTNAME_KEY"))
                 binding. tvLastName.text = it.getString("EXTRA_LASTNAME_KEY", "")
             else
-                binding. tvLastName.text = "Perez"
+                binding. tvLastName.text = "No aplica"
             if (it.containsKey("EXTRA_EMAIL_KEY"))
                 binding.tvEmail.text = it.getString("EXTRA_EMAIL_KEY", "")
             if (it.containsKey("EXTRA_GENDER_KEY"))
                 binding.tvGender.text = it.getString("EXTRA_GENDER_KEY", "")
             else
-                binding.tvGender.text = "Prefer not to say"
+                binding.tvGender.text = "No aplica"
             if (it.containsKey("EXTRA_PASSWORD_KEY"))
                 binding.tvPassword.text = it.getString("EXTRA_PASSWORD_KEY", "")
         }

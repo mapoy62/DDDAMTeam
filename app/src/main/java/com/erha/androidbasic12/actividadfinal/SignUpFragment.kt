@@ -45,9 +45,10 @@ class SignUpFragment : Fragment() {
             val lastName = binding.etLastName.text.toString()
             val email = binding.etEmail.text.toString()
             val pass = binding.etPassword.text.toString()
+            var sex = binding.rgSex
             var selectedSex = ""
 
-            var sex = binding.rgSex
+
             //RADIOGROUP
             sex.setOnCheckedChangeListener{_, id ->
                 selectedSex = when(id){
@@ -60,23 +61,25 @@ class SignUpFragment : Fragment() {
             //CHECAR COMO MANDAR WARNING DE UNSELECTED GENDER
             //Validando la info
             binding.btRegistrar.setOnClickListener {
-                if( binding.etName.text.toString().isEmpty() || binding.etLastName.text.toString().isEmpty() ||
-                    binding.etEmail.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty() ){
-                    when{
-                        binding.etName.text.toString().isEmpty() -> Toast.makeText(activity,"Please write a name",Toast.LENGTH_SHORT).show()
-                        binding.etLastName.text.toString().isEmpty() -> Toast.makeText(activity,"Please write a last name ",Toast.LENGTH_SHORT).show()
-                        binding.etEmail.text.toString().isEmpty() -> Toast.makeText(activity,"Please write a email ",Toast.LENGTH_SHORT).show()
-                        binding.etPassword.text.toString().isEmpty() -> Toast.makeText(activity,"Please write a password ",Toast.LENGTH_SHORT).show()
-                        //selectedSex == "" -> Toast.makeText(activity,"Please select a gender",Toast.LENGTH_SHORT).show()
+                if (binding.etName.text.toString().isEmpty() || binding.etLastName.text.toString().isEmpty() ||
+                    binding.etEmail.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()) {
+
+                    when {
+                        binding.etName.text.toString().isEmpty() -> Toast.makeText(activity, "Please write a name", Toast.LENGTH_SHORT).show()
+                        binding.etLastName.text.toString().isEmpty() -> Toast.makeText(activity, "Please write a last name", Toast.LENGTH_SHORT).show()
+                        binding.etEmail.text.toString().isEmpty() -> Toast.makeText(activity, "Please write an email", Toast.LENGTH_SHORT).show()
+                        binding.etPassword.text.toString().isEmpty() -> Toast.makeText(activity, "Please write a password", Toast.LENGTH_SHORT).show()
                     }
-                }else{
-                    //Envio de datos al activity
+                } else if (sex.checkedRadioButtonId == -1) {  // Verifica si ningún botón está seleccionado
+                    Toast.makeText(activity, "Please select a gender", Toast.LENGTH_SHORT).show()
+                } else {
+                    // Envío de datos al activity
                     val intent = Intent(activity, LoggedInActivity::class.java).apply {
                         putExtra("EXTRA_NAME_KEY", binding.etName.text.toString())
                         putExtra("EXTRA_LASTNAME_KEY", binding.etLastName.text.toString())
                         putExtra("EXTRA_EMAIL_KEY", binding.etEmail.text.toString())
                         putExtra("EXTRA_PASSWORD_KEY", binding.etPassword.text.toString())
-                        //putExtra("EXTRA_GENDER_KEY", selectedSex)
+                        putExtra("EXTRA_GENDER_KEY", selectedSex)
                     }
                     startActivity(intent)
                 }
