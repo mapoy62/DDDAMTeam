@@ -22,4 +22,9 @@
     <string name="imageDescLogin">Blue background for Login view</string>
     <string name="imageDescRegister">Blue background for Register view</string>
     <string name="imageDescLogged">Blue background to show data registered</string>
+    <string name="toast_name">Please write a name</string>
+    <string name="toast_lastName">Please write a last name</string>
+    <string name="toast_email">Please write an email</string>
+    <string name="toast_password">Please write a password</string>
+    <string name="toast_gender">Please select a gender</string>
 </resources>

@@ -26,15 +26,13 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
 
-        val email = binding.etEmail.text.toString()
-        val password = binding.etPassword.text.toString()
         val btLogin = binding.btLogin
 
         btLogin.setOnClickListener {
             if(binding.etEmail.text.toString().isEmpty() || binding.etPassword.text.toString().isEmpty()){
                 when{
-                    binding.etEmail.text.toString().isEmpty() -> Toast.makeText(activity,"Please write your email address", Toast.LENGTH_SHORT).show()
-                    binding.etPassword.text.toString().isEmpty()-> Toast.makeText(activity,"Please write your password",Toast.LENGTH_SHORT).show()
+                    binding.etEmail.text.toString().isEmpty() -> Toast.makeText(activity,getString(R.string.toast_email), Toast.LENGTH_SHORT).show()
+                    binding.etPassword.text.toString().isEmpty()-> Toast.makeText(activity,getString(R.string.toast_password),Toast.LENGTH_SHORT).show()
                 }
             }else{
                 //Envío de datos al Activity que mostrará la info
@@ -48,7 +46,11 @@ class LoginFragment : Fragment() {
         }
 
         binding.btToRegister.setOnClickListener {
-           parentFragmentManager.beginTransaction().replace(R.id.fragmentPrincipal,SignUpFragment.newInstance()).commit()
+           parentFragmentManager
+               .beginTransaction()
+               .replace(R.id.fragmentPrincipal,SignUpFragment.newInstance())
+               .addToBackStack("SignUpFragment")
+               .commit()
         }
         return binding.root
     }

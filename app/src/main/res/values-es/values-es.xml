@@ -22,4 +22,9 @@
     <string name="imageDescLogin">Fondo azul para la vista de Inicio de sesión</string>
     <string name="imageDescRegister">Fondo azul para la vista de Registro</string>
     <string name="imageDescLogged">Fondo azul para mostrar la información registrada</string>
+    <string name="toast_name">Por favor ingresa un nombre</string>
+    <string name="toast_password">Por favor ingresa una contraseña</string>
+    <string name="toast_lastName">Por favor ingresa un apellido</string>
+    <string name="toast_email">Por favor ingresa un correo</string>
+    <string name="toast_gender">Por favor selecciona un género</string>
 </resources>
