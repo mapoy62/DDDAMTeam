@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Básico12</string>
+    <string name="registerHeader">Registro</string>
+    <string name="registerSubHeader">Crear cuenta</string>
+    <string name="formName">Nombre</string>
+    <string name="formLastName">Apellido</string>
+    <string name="formEmail">Correo</string>
+    <string name="formPassword">Contraseña</string>
+    <string name="rgOption1">Mujer</string>
+    <string name="rgOption2">Hombre</string>
+    <string name="rgOption3">Prefiero no responder</string>
+    <string name="btnRegister">Registrar</string>
+    <string name="loginHeader">Iniciar Sesión</string>
+    <string name="loginSubHeader">¡Bienvenid@ de nuevo! Vamos a empezar</string>
+    <string name="btnLogin">Iniciar Sesión</string>
+    <string name="loginFooter">Crear cuenta</string>
+    <string name="loggedHeader">!Bienvenid@!</string>
+    <string name="loggedSubHeader">Información registrada:</string>
+    <string name="formGender">Género</string>
+    <string name="btnLogged">Regresar</string>
+    <string name="imageDescLogin">Fondo azul para la vista de Inicio de sesión</string>
+    <string name="imageDescRegister">Fondo azul para la vista de Registro</string>
+    <string name="imageDescLogged">Fondo azul para mostrar la información registrada</string>
+</resources>

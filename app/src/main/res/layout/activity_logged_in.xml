@@ -8,6 +8,7 @@
 
 
     <ImageView
+        android:contentDescription="@string/imageDescLogged"
         android:src="@drawable/loggedbck"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"

@@ -2,7 +2,7 @@
     <string name="app_name">AndroidBasic12</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="registerHeader">Register</string>
-    <string name="registerSubheader">Create your account</string>
+    <string name="registerSubHeader">Create your account</string>
     <string name="formName">Name</string>
     <string name="formLastName">Last Name</string>
     <string name="formEmail">Email</string>
@@ -19,4 +19,7 @@
     <string name="loggedSubHeader">Here is your information:</string>
     <string name="formGender">Gender</string>
     <string name="btnLogged">Return</string>
+    <string name="imageDescLogin">Blue background for Login view</string>
+    <string name="imageDescRegister">Blue background for Register view</string>
+    <string name="imageDescLogged">Blue background to show data registered</string>
 </resources>

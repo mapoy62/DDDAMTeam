@@ -12,6 +12,7 @@
         android:layout_height="match_parent"/>
 
     <ImageView
+        android:contentDescription="@string/imageDescRegister"
         android:src="@drawable/signupbck"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
@@ -74,7 +75,7 @@
 
     <TextView
         android:fontFamily="@font/cabin"
-        android:text="@string/registerSubheader"
+        android:text="@string/registerSubHeader"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvRegister"
         android:layout_marginTop="8dp"

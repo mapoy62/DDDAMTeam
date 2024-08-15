@@ -7,6 +7,7 @@
     tools:context=".actividadfinal.LoginFragment">
 
     <ImageView
+        android:contentDescription="@string/imageDescLogin"
         android:src="@drawable/signupbck"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"
@@ -88,9 +89,10 @@
 
     <EditText
         android:id="@+id/etEmail"
+        android:autofillHints="emailAddress"
         android:hint="@string/formEmail"
         android:drawableStart="@drawable/ic_email"
-        android:background="#80FFFFFF"
+        android:background="@color/gray"
         android:padding="10dp"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toEndOf="@+id/glStart"
@@ -103,10 +105,11 @@
 
     <EditText
         android:id="@+id/etPassword"
+        android:autofillHints="password"
         android:hint="@string/formPassword"
         android:inputType="textPassword"
         android:drawableStart="@drawable/ic_pwd"
-        android:background="#80FFFFFF"
+        android:background="@color/gray"
         android:padding="10dp"
         app:layout_constraintStart_toEndOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
