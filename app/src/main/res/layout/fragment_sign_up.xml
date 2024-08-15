@@ -61,7 +61,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:text="Register"
+        android:text="@string/registerHeader"
         android:fontFamily="@font/cabin_bold"
         android:layout_marginTop="45dp"
         android:textSize="38sp"
@@ -74,7 +74,7 @@
 
     <TextView
         android:fontFamily="@font/cabin"
-        android:text="Create your account"
+        android:text="@string/registerSubheader"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/tvRegister"
         android:layout_marginTop="8dp"
@@ -85,10 +85,12 @@
 
     <EditText
         android:id="@+id/etName"
-        android:hint="Name"
+        android:autofillHints="Nameee test"
+        android:hint="@string/formName"
         android:drawableStart="@drawable/ic_user"
         android:background="#80FFFFFF"
         android:layout_marginBottom="40dp"
+        android:inputType="text"
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@+id/glHeader2"
         app:layout_constraintBottom_toTopOf="@id/etLastName"
@@ -99,9 +101,11 @@
 
     <EditText
         android:id="@+id/etLastName"
-        android:hint="Last Name"
+        android:autofillHints="name"
+        android:hint="@string/formLastName"
         android:drawableStart="@drawable/ic_user"
         android:background="#80FFFFFF"
+        android:inputType="text"
         android:padding="10dp"
         app:layout_constraintStart_toEndOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
@@ -113,9 +117,11 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:hint="Email"
+        android:autofillHints="emailAddress"
+        android:hint="@string/formEmail"
         android:drawableStart="@drawable/ic_email"
         android:background="#80FFFFFF"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         app:layout_constraintStart_toEndOf="@+id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
@@ -127,7 +133,8 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:hint="Password"
+        android:autofillHints="password"
+        android:hint="@string/formPassword"
         android:inputType="textPassword"
         android:drawableStart="@drawable/ic_pwd"
         android:background="#80FFFFFF"
@@ -151,13 +158,13 @@
 
         <RadioButton
             android:id="@+id/rbWoman"
-            android:text="Woman"
+            android:text="@string/rgOption1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
             android:id="@+id/rbMan"
-            android:text="Man"
+            android:text="@string/rgOption2"
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -165,14 +172,14 @@
         <RadioButton
             android:id="@+id/rbNotSay"
             android:layout_marginStart="10dp"
-            android:text="Prefer to not respond"
+            android:text="@string/rgOption3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RadioGroup>
 
     <Button
         android:id="@+id/btRegistrar"
-        android:text="Register"
+        android:text="@string/btnRegister"
         app:layout_constraintStart_toStartOf="@id/glStart"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintTop_toTopOf="@id/glBody"

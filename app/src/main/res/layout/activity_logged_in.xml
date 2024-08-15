@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/tvRegister"
-        android:text="Welcome"
+        android:text="@string/loggedHeader"
         android:fontFamily="@font/cabin_bold"
         android:layout_marginTop="45dp"
         android:textSize="38sp"
@@ -71,7 +71,7 @@
 
     <TextView
         android:fontFamily="@font/cabin"
-        android:text="Here is your information:"
+        android:text="@string/loggedSubHeader"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/tvRegister"
         android:layout_marginTop="8dp"
@@ -82,8 +82,7 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:text="Name"
-
+        android:text="@string/formName"
         android:textColor="@color/white"
         android:background="#80FFFFFF"
         android:layout_marginBottom="40dp"
@@ -97,8 +96,7 @@
 
     <TextView
         android:id="@+id/tvLastName"
-        android:text="Last Name"
-
+        android:text="@string/formLastName"
         android:textColor="@color/white"
         android:background="#80FFFFFF"
         android:padding="10dp"
@@ -112,7 +110,7 @@
 
     <TextView
         android:id="@+id/tvEmail"
-        android:text="Email"
+        android:text="@string/formEmail"
         android:textColor="@color/white"
         android:background="#80FFFFFF"
         android:padding="10dp"
@@ -126,8 +124,7 @@
 
     <TextView
         android:id="@+id/tvPassword"
-        android:text="Password"
-
+        android:text="@string/formPassword"
         android:textColor="@color/white"
         android:background="#80FFFFFF"
         android:padding="10dp"
@@ -140,8 +137,7 @@
 
     <TextView
         android:id="@+id/tvGender"
-        android:text="Gender"
-
+        android:text="@string/formGender"
         android:textColor="@color/white"
         android:background="#80FFFFFF"
         android:padding="10dp"
@@ -159,7 +155,7 @@
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#4C829F"
-        android:text="Return"
+        android:text="@string/btnLogged"
         app:layout_constraintEnd_toEndOf="@id/glEnd"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/glStart"

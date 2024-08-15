@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">AndroidBasic12</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registerHeader">Register</string>
+    <string name="registerSubheader">Create your account</string>
+    <string name="formName">Name</string>
+    <string name="formLastName">Last Name</string>
+    <string name="formEmail">Email</string>
+    <string name="formPassword">Password</string>
+    <string name="rgOption1">Woman</string>
+    <string name="rgOption2">Man</string>
+    <string name="rgOption3">Prefer to not respond</string>
+    <string name="btnRegister">Register</string>
+    <string name="loginHeader">Login</string>
+    <string name="loginSubHeader">Welcome back! Let\'s start</string>
+    <string name="btnLogin">Log in</string>
+    <string name="loginFooter">Create Account </string>
+    <string name="loggedHeader">Welcome</string>
+    <string name="loggedSubHeader">Here is your information:</string>
+    <string name="formGender">Gender</string>
+    <string name="btnLogged">Return</string>
 </resources>
